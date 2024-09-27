@@ -1,0 +1,7 @@
+﻿build
+.vscode
+*.out
+*.in
+CMakeLists.txt
+*.exe
+ТренировкиТимы.txt
