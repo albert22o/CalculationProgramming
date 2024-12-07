@@ -1,0 +1,14 @@
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\bin\Debug\net8.0\GraphLabs.exe
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\bin\Debug\net8.0\GraphLabs.deps.json
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\bin\Debug\net8.0\GraphLabs.runtimeconfig.json
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\bin\Debug\net8.0\GraphLabs.dll
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\bin\Debug\net8.0\GraphLabs.pdb
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.AssemblyInfoInputs.cache
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.AssemblyInfo.cs
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.csproj.CoreCompileInputs.cache
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.dll
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\refint\GraphLabs.dll
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.pdb
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\GraphLabs.genruntimeconfig.cache
+C:\Users\vvrak\source\repos\GraphLabs\GraphLabs\obj\Debug\net8.0\ref\GraphLabs.dll
