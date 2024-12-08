@@ -2,10 +2,10 @@
 {
     internal class Program
     {
-        const int INF = int.MaxValue; 
+        const int INF = int.MaxValue;
         static void Main(string[] args)
         {
-                int[,] graph = {
+            int[,] graph = {
                 {0, 25, 15, 7, 2},
                 {25, 0, 6, 0, 0},
                 {15, 6, 0, 4, 0},
@@ -13,9 +13,13 @@
                 {2, 0, 0, 3, 0}
             };
 
-            int startVertex = 0; 
+            int startVertex = 0;
 
             Dijkstra(graph, startVertex);
+
+            Console.WriteLine();
+
+            BellmanFord(graph, startVertex);
         }
 
         static List<int> GetPath(int vertex, int[] predecessor)
@@ -32,17 +36,75 @@
 
         static void PrintPath(List<int> path)
         {
-            foreach(var vertex in path)
+            foreach (var vertex in path)
             {
                 Console.Write(vertex + " ");
+            }
+        }
+
+        static void BellmanFord(int[,] graph, int src)
+        {
+            int vertexCount = graph.GetLength(0);
+            int[] dist = new int[vertexCount];
+            int[] predecessor = new int[vertexCount];
+
+            for (int i = 0; i < vertexCount; i++)
+            {
+                dist[i] = INF;
+                predecessor[i] = -1;
+            }
+
+            dist[src] = 0;
+
+            for (int i = 0; i < vertexCount - 1; i++)
+            {
+                for (int j = 0; j < vertexCount; j++)
+                {
+                    for (int k = 0; k < vertexCount; k++)
+                    {
+                        if (graph[j, k] != 0 && dist[j] != INF && dist[j] + graph[j, k] < dist[k])
+                        {
+                            dist[k] = dist[j] + graph[j, k];
+                            predecessor[k] = j;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < vertexCount; i++)
+            {
+                for (int j = 0; j < vertexCount; j++)
+                {
+                    if (graph[i, j] != 0 && dist[i] != INF && dist[i] + graph[i, j] < dist[j])
+                    {
+                        Console.WriteLine("Граф содержит отрицательный цикл(ы)");
+                        return;
+                    }
+                }
+            }
+
+            Console.WriteLine($"Белман Форд");
+
+            for (int i = 0; i < vertexCount; i++)
+            {
+                if (dist[i] == INF)
+                {
+                    Console.WriteLine($"вершина {i} недостижима");
+                }
+                else
+                {
+                    Console.Write($"вершина {i}, расстояние = {dist[i]}, путь: ");
+                    PrintPath(GetPath(i, predecessor));
+                    Console.WriteLine();
+                }
             }
         }
 
         static void Dijkstra(int[,] graph, int src)
         {
             int vertexCount = graph.GetLength(0);
-            int[] dist = new int[vertexCount];            
-            int[] predecessor = new int[vertexCount];         
+            int[] dist = new int[vertexCount];
+            int[] predecessor = new int[vertexCount];
 
             var queue = new PriorityQueue<(int Distance, int Vertex), int>();
 
@@ -86,6 +148,5 @@
                 }
             }
         }
-
     }
 }
